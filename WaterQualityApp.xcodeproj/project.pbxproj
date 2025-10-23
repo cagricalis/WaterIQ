@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		047E5DAC2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
+		047E5DAD2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
+		047E5DAE2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
+		33F649CB51072DE50504D38F /* Pods_WaterQualityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0484948B2E993AC500647AA4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,9 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0484947A2E993AC300647AA4 /* WaterQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0484948A2E993AC500647AA4 /* WaterQualityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048494942E993AC500647AA4 /* WaterQualityAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BEE32946C91F8EEE7DB35BE /* Pods-WaterQualityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterQualityApp.debug.xcconfig"; path = "Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterQualityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF91EDA32CEDE0CA92C58D22 /* Pods-WaterQualityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterQualityApp.release.xcconfig"; path = "Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F649CB51072DE50504D38F /* Pods_WaterQualityApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,9 @@
 				0484948D2E993AC500647AA4 /* WaterQualityAppTests */,
 				048494972E993AC500647AA4 /* WaterQualityAppUITests */,
 				0484947B2E993AC300647AA4 /* Products */,
+				05F69DB2A933D2E0D5D8B7EC /* Pods */,
+				140A90DAA2AC05E9680EF61B /* Frameworks */,
+				047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +107,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		05F69DB2A933D2E0D5D8B7EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3BEE32946C91F8EEE7DB35BE /* Pods-WaterQualityApp.debug.xcconfig */,
+				DF91EDA32CEDE0CA92C58D22 /* Pods-WaterQualityApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		140A90DAA2AC05E9680EF61B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -99,9 +131,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0484949E2E993AC500647AA4 /* Build configuration list for PBXNativeTarget "WaterQualityApp" */;
 			buildPhases = (
+				1A58AE007EEFBF896D7EC358 /* [CP] Check Pods Manifest.lock */,
 				048494762E993AC300647AA4 /* Sources */,
 				048494772E993AC300647AA4 /* Frameworks */,
 				048494782E993AC300647AA4 /* Resources */,
+				9A12DEA35CC03CF9C316D88F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -111,8 +145,6 @@
 				0484947C2E993AC300647AA4 /* WaterQualityApp */,
 			);
 			name = WaterQualityApp;
-			packageProductDependencies = (
-			);
 			productName = WaterQualityApp;
 			productReference = 0484947A2E993AC300647AA4 /* WaterQualityApp.app */;
 			productType = "com.apple.product-type.application";
@@ -134,8 +166,6 @@
 				0484948D2E993AC500647AA4 /* WaterQualityAppTests */,
 			);
 			name = WaterQualityAppTests;
-			packageProductDependencies = (
-			);
 			productName = WaterQualityAppTests;
 			productReference = 0484948A2E993AC500647AA4 /* WaterQualityAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -157,8 +187,6 @@
 				048494972E993AC500647AA4 /* WaterQualityAppUITests */,
 			);
 			name = WaterQualityAppUITests;
-			packageProductDependencies = (
-			);
 			productName = WaterQualityAppUITests;
 			productReference = 048494942E993AC500647AA4 /* WaterQualityAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -212,6 +240,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047E5DAC2EA9038600E36996 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047E5DAD2EA9038600E36996 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,10 +256,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047E5DAE2EA9038600E36996 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A58AE007EEFBF896D7EC358 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WaterQualityApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A12DEA35CC03CF9C316D88F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		048494762E993AC300647AA4 /* Sources */ = {
@@ -306,7 +379,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -369,7 +443,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -390,15 +465,17 @@
 		};
 		0484949F2E993AC500647AA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BEE32946C91F8EEE7DB35BE /* Pods-WaterQualityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WaterQualityApp/Preview Content\"";
-				DEVELOPMENT_TEAM = S7JZ82LZ75;
+				DEVELOPMENT_TEAM = 275W425BAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Want to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -419,15 +496,17 @@
 		};
 		048494A02E993AC500647AA4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF91EDA32CEDE0CA92C58D22 /* Pods-WaterQualityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WaterQualityApp/Preview Content\"";
-				DEVELOPMENT_TEAM = S7JZ82LZ75;
+				DEVELOPMENT_TEAM = 275W425BAN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Want to use your camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,0 +1,34 @@
+
+
+[
+  {
+    "name": "Erikli",
+    "imageName": "erikli",
+    "qualityScore": 65,
+    "ph": 7.2,
+    "hardness": 120,
+    "minerals": "Ca, Mg",
+    "description": "Temiz kaynak suyu.",
+    "barcode": "52018183"
+  },
+  {
+    "name": "Hayat",
+    "imageName": "hayat",
+    "qualityScore": 24,
+    "ph": 6.8,
+    "hardness": 110,
+    "minerals": "Ca, Mg, Na",
+    "description": "Türkiye genelinde yaygın.",
+    "barcode": "1234567890123"
+  },
+  {
+    "name": "Saka",
+    "imageName": "saka",
+    "qualityScore": 92,
+    "ph": 7.0,
+    "hardness": 115,
+    "minerals": "Ca, Mg, K",
+    "description": "Dengeli mineralli su.",
+    "barcode": "1234567890121"
+  }
+]

@@ -1,24 +1,13 @@
-//
-//  ContentView.swift
-//  WaterQualityApp
-//
-//  Created by Çağrı Mehmet Çalış on 10.10.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        MainTabView()  // Artık historyManager veya diğer modelleri buradan geçmeye gerek yok
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }

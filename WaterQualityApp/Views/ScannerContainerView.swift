@@ -1,52 +1,78 @@
 import SwiftUI
-import AVFoundation
 
-struct ScannerView: View {
-    @Environment(\.dismiss) var dismiss
-    @StateObject private var camera = CameraModel()
-    
+struct ScannerContainerView: View {
+    @EnvironmentObject var cameraModel: CameraModel
+    @EnvironmentObject var networkManager: NetworkManager
+    @EnvironmentObject var historyManager: HistoryManager
+
+    @State private var selectedBrand: WaterBrand?
+    @State private var isNavigating = false
+
     var body: some View {
         VStack {
-            // Üstte küçük bir başlık ve geri butonu
-            HStack {
-                Button(action: { dismiss() }) {
-                    Image(systemName: "chevron.left")
-                        .font(.title2)
-                        .padding()
-                }
-                Spacer()
-                Text("Scan Code")
+            Text("Scan Code")
+                .font(.headline)
+                .padding()
+
+            CameraPreview(session: cameraModel.session)
+                .frame(height: 300)
+                .cornerRadius(12)
+                .shadow(radius: 3)
+                .padding()
+
+            if let code = cameraModel.scannedCode {
+                Text("Okunan Kod: \(code)")
                     .font(.headline)
-                Spacer()
-                Spacer().frame(width: 44) // denge için
-            }
-            .padding(.horizontal)
-            
-            // Kamera önizleme alanı
-            ZStack {
-                CameraPreview(session: camera.session)
-                    .ignoresSafeArea(.container, edges: .bottom)
-                
-                if let code = camera.scannedCode {
-                    VStack {
-                        Spacer()
-                        Text("Sonuç: \(code)")
-                            .font(.headline)
-                            .padding()
-                            .background(Color.black.opacity(0.6))
-                            .cornerRadius(10)
-                            .foregroundColor(.white)
-                        Spacer().frame(height: 80)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.horizontal)
+                    .onAppear {
+                        handleScannedCode(code)
                     }
-                }
+            } else {
+                Text("Henüz bir kod okutulmadı")
+                    .foregroundColor(.gray)
+                    .padding()
             }
+
+            Spacer()
+
+            NavigationLink(
+                isActive: $isNavigating,
+                destination: {
+                    if let brand = selectedBrand {
+                        WaterDetailView(brand: brand)
+                            .onAppear { historyManager.add(brand) }
+                            .onDisappear { resetScanner() }
+                    } else {
+                        EmptyView()
+                    }
+                },
+                label: { EmptyView() }
+            )
         }
         .onAppear {
-            camera.checkPermission()
-            camera.startSession()
+            cameraModel.startSession()
+            networkManager.fetchLocalWaterBrands()
+            resetScanner()
         }
         .onDisappear {
-            camera.stopSession()
+            cameraModel.stopSession()
         }
+        .navigationTitle("Scanner")
+    }
+
+    private func handleScannedCode(_ code: String) {
+        if let brand = networkManager.waterBrands.first(where: { $0.barcode == code }) {
+            selectedBrand = brand
+            isNavigating = true
+        }
+    }
+
+    private func resetScanner() {
+        selectedBrand = nil
+        isNavigating = false
+        cameraModel.resetScanner()
     }
 }

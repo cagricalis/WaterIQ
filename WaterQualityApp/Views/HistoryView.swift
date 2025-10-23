@@ -1,11 +1,11 @@
 import SwiftUI
 
-struct HistoryListView: View {
-    @ObservedObject var historyManager: HistoryManager = .shared
+struct HistoryView: View {
+    @EnvironmentObject var historyManager: HistoryManager
 
     var body: some View {
-        NavigationStack {
-            List(historyManager.scannedBrands) { brand in
+        List {
+            ForEach(historyManager.historyList.reversed()) { brand in
                 NavigationLink(destination: WaterDetailView(brand: brand)) {
                     HStack {
                         Image(brand.imageName)
@@ -15,9 +15,10 @@ struct HistoryListView: View {
                         Text(brand.name)
                             .font(.headline)
                     }
+                    .padding(.vertical, 4)
                 }
             }
-            .navigationTitle("History")
         }
+        .navigationTitle("History")
     }
 }

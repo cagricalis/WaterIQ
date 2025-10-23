@@ -1,30 +1,18 @@
 import SwiftUI
 
-struct SettingsView: View {
-    let items: [SettingItem] = [
-        SettingItem(title: "Hakkımızda", destination: AnyView(AboutView())),
-        SettingItem(title: "Arkadaşını Davet Et", destination: AnyView(InviteFriendView())),
-        SettingItem(title: "Premium", destination: AnyView(PremiumView())),
-        SettingItem(title: "Yardım", destination: AnyView(HelpView())),
-        SettingItem(title: "Gizlilik", destination: AnyView(PrivacyView())),
-        SettingItem(title: "Terms of Service", destination: AnyView(TermsView()))
-    ]
-    
+struct SettingsListView: View {
+    let settingsItems = ["Hakkımızda", "Arkadaşını Davet Et", "Premium", "Yardım", "Gizlilik", "Terms of Service"]
+
     var body: some View {
-        List(items) { item in
-            NavigationLink(destination: item.destination) {
-                Text(item.title)
-                    .font(.body)
-                    .padding(.vertical, 8)
+        List {
+            ForEach(settingsItems, id: \.self) { item in
+                NavigationLink(destination: SettingsDetailView(title: item)) {
+                    Text(item)
+                        .font(.headline)
+                        .padding(.vertical, 6)
+                }
             }
         }
-        .listStyle(InsetGroupedListStyle())
         .navigationTitle("Settings")
     }
-}
-
-struct SettingItem: Identifiable {
-    let id = UUID()
-    let title: String
-    let destination: AnyView
 }
