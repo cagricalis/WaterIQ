@@ -1,18 +1,40 @@
 import SwiftUI
 
 struct SettingsListView: View {
-    let settingsItems = ["Hakkımızda", "Arkadaşını Davet Et", "Premium", "Yardım", "Gizlilik", "Terms of Service"]
+    @EnvironmentObject var session: UserSession
 
     var body: some View {
         List {
-            ForEach(settingsItems, id: \.self) { item in
-                NavigationLink(destination: SettingsDetailView(title: item)) {
-                    Text(item)
-                        .font(.headline)
-                        .padding(.vertical, 6)
+            Section(header: Text("Hesap")) {
+                HStack {
+                    Text("Plan:")
+                    Spacer()
+                    Text(session.plan == .premium ? "⭐️ Premium" : "🔓 Free")
+                        .foregroundColor(session.plan == .premium ? .yellow : .gray)
                 }
             }
+            Section {
+                Button("Çıkış Yap") {
+                    session.signOut()
+                }
+                .foregroundColor(.red)
+            }
+
+
+            Section(header: Text("Uygulama")) {
+                NavigationLink("Hakkımızda", destination: Text("DIGIT Bilişim – WaterIQ Projesi"))
+                NavigationLink("Arkadaşını Davet Et", destination: Text("Yakında aktif olacak"))
+                
+                NavigationLink("Premium", destination: PaywallView()
+                    .environmentObject(session))
+                
+                NavigationLink("Yardım", destination: Text("Destek için: support@wateriq.app"))
+                NavigationLink("Gizlilik", destination: Text("Verileriniz gizlidir."))
+                NavigationLink("Terms of Service", destination: Text("Kullanım koşulları yakında."))
+            }
         }
-        .navigationTitle("Settings")
+        .navigationTitle("Ayarlar")
     }
 }
+
+

@@ -10,6 +10,9 @@
 		047E5DAC2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
 		047E5DAD2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
 		047E5DAE2EA9038600E36996 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */; };
+		04C001052EAF971800D59256 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C001042EAF971800D59256 /* WidgetKit.framework */; };
+		04C001072EAF971800D59256 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C001062EAF971800D59256 /* SwiftUI.framework */; };
+		04C001142EAF971900D59256 /* HydrationWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 04C001032EAF971800D59256 /* HydrationWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		33F649CB51072DE50504D38F /* Pods_WaterQualityApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,17 +31,51 @@
 			remoteGlobalIDString = 048494792E993AC300647AA4;
 			remoteInfo = WaterQualityApp;
 		};
+		04C001122EAF971900D59256 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 048494722E993AC300647AA4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04C001022EAF971800D59256;
+			remoteInfo = HydrationWidgetExtensionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		04C001192EAF971900D59256 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				04C001142EAF971900D59256 /* HydrationWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		047E5DAB2EA9038600E36996 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0484947A2E993AC300647AA4 /* WaterQualityApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterQualityApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0484948A2E993AC500647AA4 /* WaterQualityAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		048494942E993AC500647AA4 /* WaterQualityAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterQualityAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C001032EAF971800D59256 /* HydrationWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = HydrationWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		04C001042EAF971800D59256 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		04C001062EAF971800D59256 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		3BEE32946C91F8EEE7DB35BE /* Pods-WaterQualityApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterQualityApp.debug.xcconfig"; path = "Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WaterQualityApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF91EDA32CEDE0CA92C58D22 /* Pods-WaterQualityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WaterQualityApp.release.xcconfig"; path = "Target Support Files/Pods-WaterQualityApp/Pods-WaterQualityApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		04C001152EAF971900D59256 /* Exceptions for "HydrationWidgetExtension" folder in "HydrationWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 04C001022EAF971800D59256 /* HydrationWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0484947C2E993AC300647AA4 /* WaterQualityApp */ = {
@@ -54,6 +91,14 @@
 		048494972E993AC500647AA4 /* WaterQualityAppUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = WaterQualityAppUITests;
+			sourceTree = "<group>";
+		};
+		04C001082EAF971800D59256 /* HydrationWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				04C001152EAF971900D59256 /* Exceptions for "HydrationWidgetExtension" folder in "HydrationWidgetExtensionExtension" target */,
+			);
+			path = HydrationWidgetExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +126,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C001002EAF971800D59256 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C001072EAF971800D59256 /* SwiftUI.framework in Frameworks */,
+				04C001052EAF971800D59256 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +144,7 @@
 				0484947C2E993AC300647AA4 /* WaterQualityApp */,
 				0484948D2E993AC500647AA4 /* WaterQualityAppTests */,
 				048494972E993AC500647AA4 /* WaterQualityAppUITests */,
+				04C001082EAF971800D59256 /* HydrationWidgetExtension */,
 				0484947B2E993AC300647AA4 /* Products */,
 				05F69DB2A933D2E0D5D8B7EC /* Pods */,
 				140A90DAA2AC05E9680EF61B /* Frameworks */,
@@ -103,6 +158,7 @@
 				0484947A2E993AC300647AA4 /* WaterQualityApp.app */,
 				0484948A2E993AC500647AA4 /* WaterQualityAppTests.xctest */,
 				048494942E993AC500647AA4 /* WaterQualityAppUITests.xctest */,
+				04C001032EAF971800D59256 /* HydrationWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				B70DE70EEF67FCE435B9E17D /* Pods_WaterQualityApp.framework */,
+				04C001042EAF971800D59256 /* WidgetKit.framework */,
+				04C001062EAF971800D59256 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,10 +194,12 @@
 				048494772E993AC300647AA4 /* Frameworks */,
 				048494782E993AC300647AA4 /* Resources */,
 				9A12DEA35CC03CF9C316D88F /* [CP] Embed Pods Frameworks */,
+				04C001192EAF971900D59256 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04C001132EAF971900D59256 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				0484947C2E993AC300647AA4 /* WaterQualityApp */,
@@ -191,6 +251,28 @@
 			productReference = 048494942E993AC500647AA4 /* WaterQualityAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		04C001022EAF971800D59256 /* HydrationWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04C001162EAF971900D59256 /* Build configuration list for PBXNativeTarget "HydrationWidgetExtensionExtension" */;
+			buildPhases = (
+				04C000FF2EAF971800D59256 /* Sources */,
+				04C001002EAF971800D59256 /* Frameworks */,
+				04C001012EAF971800D59256 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				04C001082EAF971800D59256 /* HydrationWidgetExtension */,
+			);
+			name = HydrationWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = HydrationWidgetExtensionExtension;
+			productReference = 04C001032EAF971800D59256 /* HydrationWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -212,6 +294,9 @@
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 048494792E993AC300647AA4;
 					};
+					04C001022EAF971800D59256 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 				};
 			};
 			buildConfigurationList = 048494752E993AC300647AA4 /* Build configuration list for PBXProject "WaterQualityApp" */;
@@ -231,6 +316,7 @@
 				048494792E993AC300647AA4 /* WaterQualityApp */,
 				048494892E993AC500647AA4 /* WaterQualityAppTests */,
 				048494932E993AC500647AA4 /* WaterQualityAppUITests */,
+				04C001022EAF971800D59256 /* HydrationWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +343,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				047E5DAE2EA9038600E36996 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04C001012EAF971800D59256 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +419,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04C000FF2EAF971800D59256 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -338,6 +438,11 @@
 			isa = PBXTargetDependency;
 			target = 048494792E993AC300647AA4 /* WaterQualityApp */;
 			targetProxy = 048494952E993AC500647AA4 /* PBXContainerItemProxy */;
+		};
+		04C001132EAF971900D59256 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04C001022EAF971800D59256 /* HydrationWidgetExtensionExtension */;
+			targetProxy = 04C001122EAF971900D59256 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,6 +702,62 @@
 			};
 			name = Release;
 		};
+		04C001172EAF971900D59256 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 275W425BAN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HydrationWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HydrationWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onlock.WaterQualityApp.HydrationWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04C001182EAF971900D59256 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 275W425BAN;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HydrationWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HydrationWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Onlock.WaterQualityApp.HydrationWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -632,6 +793,15 @@
 			buildConfigurations = (
 				048494A52E993AC500647AA4 /* Debug */,
 				048494A62E993AC500647AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04C001162EAF971900D59256 /* Build configuration list for PBXNativeTarget "HydrationWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04C001172EAF971900D59256 /* Debug */,
+				04C001182EAF971900D59256 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
